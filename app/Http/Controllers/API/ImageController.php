@@ -18,7 +18,8 @@ class ImageController extends Controller
             ->map(function ($image) {
                 return [
                     'id' => $image->id,
-                    'url' => url(Storage::url($image->path)),
+                    // 'url' => asset(Storage::url($image->path)),
+                    'url' => $image->path,
                     'label' => $image->label,
                 ];
             });
